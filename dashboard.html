@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | FotoFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">FotoFlow</h2>
+
+    <nav>
+      <a class="active">Ensaios</a>
+      <a>Perfil</a>
+      <a onclick="logout()" class="logout">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="main">
+    <header class="top">
+      <h1 id="welcome"></h1>
+      <button class="btn primary" onclick="abrirModal()">+ Novo ensaio</button>
+    </header>
+
+
+    <section class="ensaios" id="listaEnsaios">
+      <!-- Ensaios renderizados aqui -->
+    </section>
+  </main>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Novo ensaio</h3>
+
+    <input type="text" id="tituloEnsaio" placeholder="Nome do ensaio">
+    <textarea id="descricaoEnsaio" placeholder="Descrição (opcional)"></textarea>
+    <input type="file" multiple onchange="uploadFotos(event, $index)">
+
+    <div class="modal-actions">
+      <button class="btn ghost" onclick="fecharModal()">Cancelar</button>
+      <button class="btn primary" onclick="criarEnsaio()">Criar</button>
+    </div>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

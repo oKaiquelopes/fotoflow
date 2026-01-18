@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --bg: #ffffff;
+  --soft: #f8fafc;
+  --text: #1e1e1e;
+  --muted: #64748b;
+  --primary: #4f46e5;
+  --border: #e5e7eb;
+}
+html{
+    scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.header-inner {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoHeader{
+    display: flex;
+    width: auto;
+    align-items: center;
+    height: auto;
+}
+.logoHeader img{
+    width: 120px;
+    height: 72px;
+    margin-right: 8px;
+}
+nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.btn-header {
+  background: var(--primary);
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.hero {
+  position: relative;
+  padding: 140px 0 120px;
+  overflow: hidden;
+}
+.hero-text {
+  max-width: 780px;
+}
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+}
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 24px 0;
+}
+.subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 600px;
+}
+.hero-actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+    font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary span {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover span {
+  transform: translateX(6px);
+}
+
+.btn-secondary {
+    font-size: 1rem;
+  padding: 16px 30px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  background: white;
+}
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.glow-1 {
+  width: 420px;
+  height: 420px;
+  background: #6366f1;
+  top: -120px;
+  right: -100px;
+}
+
+.glow-2 {
+  width: 300px;
+  height: 300px;
+  background: #38bdf8;
+  bottom: 60px;
+  right: 200px;
+}
+
+.glow-3 {
+  width: 260px;
+  height: 260px;
+  background: #818cf8;
+  top: 200px;
+  left: -120px;
+}
+
+.glow-4 {
+  width: 300px;
+  height: 200px;
+  background: #6366f1;
+  bottom: 250px;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.section {
+  padding: 120px 0;
+}
+.section.soft {
+  background: var(--soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.section-grid {
+  display: grid;
+  gap: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.section-text {
+  max-width: 520px;
+}
+
+.section-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.section-text p{
+    font-weight: 400;
+}
+.cards {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.section-title {
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+
+.flow {
+  display: grid;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.flow-item {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.flow-item span {
+  font-weight: 700;
+  color: var(--primary);
+}
+.cta {
+  position: relative;
+  padding: 140px 0;
+  text-align: center;
+}
+
+.cta-box {
+  max-width: 760px;
+  margin: auto;
+}
+
+.cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.big {
+  font-size: 1.05rem;
+}
+#preco{
+    height: 120vh;
+}
+.preco{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 16px;
+    gap: 40px;
+    }
+.preco h2{
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+.plano{
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+.destaque{
+    margin-bottom: 5%;
+}
+.descc{
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.preco p{
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+.preco ul{
+    list-style: none;
+    margin-bottom: 32px;
+}
+.preco ul li{
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+.preco .valor{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.preco .btn-comprar{
+    font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.preco .btn-comprar span {
+  transition: transform 0.3s ease;
+}
+.preco .btn-comprar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.3);
+}
+.preco .btn-comprar:hover span {
+  transform: translateX(6px);
+}
+
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+span a{
+    color: var(--primary);
+    text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (min-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+}
